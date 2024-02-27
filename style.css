@@ -15,9 +15,7 @@ body {
 }
 .container {
   display: flex;
-}
-.side_bar {
-  min-width: 95px;
+  gap: 0.8rem;
 }
 .side_bar .icon {
   display: flex;
@@ -25,62 +23,79 @@ body {
   align-items: center;
 }
 .side_bar .icon img {
-  width: 35%;
-  padding-top: 25px;
+  padding-top: 1.2rem;
 }
 .side_bar .icon span {
   font-size: 0.8rem;
 }
-.bar {
-  padding-bottom: 25px;
-}
+/* .bar {
+  padding-bottom: 1.2rem;
+} */
 .nav_one {
-  width: 100vw;
+  height: 14vmin;
   display: flex;
-  padding: 10px 5px;
-  gap: 25px;
-  /* background-color: red; */
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+.nav_one .logo {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 .nav_one .logo i {
   color: #ff0000;
   font-size: 3rem;
 }
 .nav_one .logo span {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .nav_one .input {
   display: flex;
   align-items: center;
 }
 .nav_one .input input {
-  height: 60px;
-  width: 500px;
+  height: 10vmin;
+  width: 40vw;
   border: 1px solid rgba(172, 165, 165, 0.934);
 }
 .nav_one .input .image_container {
-  height: 60px;
-  width: 65px;
+  height: 10vmin;
+  width: 10vmin;
   background-color: rgba(128, 128, 128, 0.329);
-  padding: 15px 0;
+}
+.nav_one .input .image_container .img {
+  height: 10vmin;
+  width: 6vmin;
+  background-image: url(./icons/search.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-left: 0.5rem;
 }
 .nav_one .voice_search {
-  height: 60px;
-  width: 60px;
-  background-color: rgba(128, 128, 128, 0.329);
-  border-radius: 50%;
-  overflow: hidden;
-  padding: 16px 10px 10px 16px;
-}
-.nav_one .other_icons {
-  /* background-color: blue; */
-  width: 300px;
   display: flex;
   align-items: center;
-  gap: 15px;
+  height: 10vmin;
+  width: 10vmin;
+  background-color: rgba(128, 128, 128, 0.329);
+  border-radius: 50%;
+  padding-top: 0.8rem;
+  padding-left: 1rem;
 }
-.nav_one .other_icons .image {
-  width: 35px;
+.nav_one .voice_search .img {
+  background-image: url(./icons/mic.svg);
+  background-repeat: no-repeat;
+  padding: 1rem;
 }
+.nav_one .other_icons {
+  width: 14vw;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .nav_one .other_icons .avatar {
   height: 40px;
 }
@@ -99,8 +114,8 @@ body {
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 100px;
-  row-gap: 20px;
+  justify-content: space-between;
+  gap: 1rem;
 }
 .content .box {
   width: 25%;
@@ -131,4 +146,15 @@ span {
 }
 .text_container .text span {
   margin: 0px 8px;
+}
+@media only screen and (max-width: 600px) {
+  .voice_search {
+    position: relative;
+  }
+  .voice_search .img {
+    position: absolute;
+    left: 0.4rem;
+  }
+}
+@media only screen and (min-width: 600px) {
 }
